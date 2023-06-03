@@ -6,11 +6,14 @@
     --Cor-base3: #1125d4;
     --Cor-base4: #1125d4;
 
-    --tv-1: #d4ba65;
-    --tv-2: #E83845;
-    --tv-3: #E389B9;
-    --tv-4: #746AB0;
-    --tv-5: #288BA8;
+    --tv-1: #cc8e92;
+    --tv-2: #e4d9df;
+    --tv-3: #e2d394;
+    --tv-4: #898797;
+    --tv-5: #9ed4e7;
+
+    --shadow-1: #ffffffbf;
+    --shadow-2: #0000002c;
 }
 
 * {
@@ -21,13 +24,14 @@
 }
 
 body {
-    background-color: snow;
+    background-color: #f8cb77;
     height: 100vh;
     display: flex;
     justify-content: center;
 }
 
 section {
+    max-width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +76,7 @@ section {
     border-radius: 6rem 6rem 0 0;
     border: 4px solid var(--Contorno);
     border-bottom: none;
+    box-shadow: 8px 1px 0px 0px var(--shadow-1) inset;
 }
 
 .retangulo {
@@ -83,6 +88,7 @@ section {
     height: 300px;
     border: 4px solid var(--Contorno);
     border-radius: 15px;
+    box-shadow: 5px 5px 1px 0px var(--shadow-1) inset;
 }
 
 .tela {
@@ -92,37 +98,43 @@ section {
     flex-grow: 5;
     border: 4px solid var(--Contorno);
     border-radius: 15px;
-    z-index: 9;
-    box-shadow:-2px 2px 0px 10px rgba(0,0,0,0.21) inset;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
 }
+
 
 .cor1{
     flex-grow: 1;
     background-color: var(--tv-1);
-    border-radius: 10px 0 0 10px;
+    box-shadow: 30px 30px 15px 0px var(--shadow-2) inset, 0px -30px 15px 0px var(--shadow-2) inset;
 }
 .cor2{
-    z-index: 2;
     flex-grow: 1;
     background-color: var(--tv-2);
+    box-shadow: 0px 30px 15px 0px var(--shadow-2) inset, 0px -30px 15px 0px var(--shadow-2) inset;
+    
 }
 .cor3{
     flex-grow: 1;
     background-color: var(--tv-3);
+    box-shadow: 0px 30px 15px 0px var(--shadow-2) inset, 0px -30px 15px 0px var(--shadow-2) inset;
 }
 .cor4{
     flex-grow: 1;
     background-color: var(--tv-4);
+    box-shadow: 0px 30px 15px 0px var(--shadow-2) inset, 0px -30px 15px 0px var(--shadow-2) inset;
 }
 .cor5{
     flex-grow: 1;
     background-color: var(--tv-5);
-    border-radius: 0 10px 10px 0;
+    box-shadow: -30px -30px 15px 0px var(--shadow-2) inset, 0px 30px 15px 0px var(--shadow-2) inset;
 }
 
 div.aside {
     background-color: var(--Principal);
     padding: 0;
+    box-shadow: 4px 4px 0px 0px var(--shadow-1) inset;
 }
 
 .aside {
@@ -150,6 +162,7 @@ div.aside {
     margin-bottom: 8px;
     border-radius: 50%;
     border: 4px solid var(--Contorno);
+    box-shadow: 5px 2px 0px 0px var(--shadow-1) inset, -5px -3px 0px 0px rgba(61, 61, 61, 0.37) inset;
 }
 
 .circle-a {
@@ -191,4 +204,21 @@ div.aside {
     border: 3px solid var(--Contorno);
     border-top: 0px solid var(--Contorno);
     border-radius: 0 0 8px 8px;
+    box-shadow: 6px 0px 1px 0px var(--shadow-1) inset;
+}
+
+.sombra-1 {
+    background-color: var(--Contorno);
+    width: 600px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.sombra-2 {
+    background-color: var(--shadow-2);
+    width: 650px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
 }
